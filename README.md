@@ -87,9 +87,9 @@ Copy-Item -Recurse -Force .\skills\* "$HOME\.claude\skills\"
 
 本项目在方法论设计上参考了三个开源科研技能仓库，仅吸收其设计原则，所有技能正文、模板与清单均为独立编写，未复制原仓库文本或照搬其结构命名：
 
-- `awesome-ai-research-writing`：吸收了四段式任务约束（角色、任务、约束、自查）、配图追求扁平留白与短标签的理念，以及审稿时区分“表述问题”与“方法缺陷”并评估“可救性”的方法。
-- `academic-research-skills`：吸收了阶段间强制检查点、作者始终掌舵、将诚信核查与多轮审稿纳入主流程的设计原则。该仓库采用 CC BY-NC 许可，本项目完全独立重写，未复用其文字内容。
-- `nature-skills`：吸收了入口技能只做路由、按需加载轻量参考片段的架构思路，以及将写作、润色与返修回复拆分为独立职责的做法。
+- [awesome-ai-research-writing](https://github.com/Leey21/awesome-ai-research-writing)：吸收了四段式任务约束（角色、任务、约束、自查）、配图追求扁平留白与短标签的理念，以及审稿时区分“表述问题”与“方法缺陷”并评估“可救性”的方法。
+- [academic-research-skills](https://github.com/Imbad0202/academic-research-skills)：吸收了阶段间强制检查点、作者始终掌舵、将诚信核查与多轮审稿纳入主流程的设计原则。该仓库采用 CC BY-NC 许可，本项目完全独立重写，未复用其文字内容。
+- [nature-skills](https://github.com/Yuan1z0825/nature-skills)：吸收了入口技能只做路由、按需加载轻量参考片段的架构思路，以及将写作、润色与返修回复拆分为独立职责的做法。
 
 ## 许可协议
 

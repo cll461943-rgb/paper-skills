@@ -87,9 +87,9 @@ Once installed, open Claude Code in your paper directory and invoke `paper-pilot
 
 This project draws high-level design inspiration from three open-source research skill repositories. Only principles were absorbed; all skill instructions, templates, and checklists were written from scratch without copying original text or mirroring their structural naming:
 
-- `awesome-ai-research-writing`: four-part prompt discipline (role, task, constraints, self-check), flat low-clutter diagram aesthetics with short labels, and separating presentation issues from methodological flaws while assessing salvageability during review.
-- `academic-research-skills`: mandatory checkpoints between phases, keeping the human researcher as the sole decision-making author, and integrating integrity audits plus multi-round review into the main pipeline. Because that repository uses a CC BY-NC license, zero text was copied.
-- `nature-skills`: router-first entry architecture with on-demand reference loading, and separating drafting, polishing, and reviewer-response responsibilities.
+- [awesome-ai-research-writing](https://github.com/Leey21/awesome-ai-research-writing): four-part prompt discipline (role, task, constraints, self-check), flat low-clutter diagram aesthetics with short labels, and separating presentation issues from methodological flaws while assessing salvageability during review.
+- [academic-research-skills](https://github.com/Imbad0202/academic-research-skills): mandatory checkpoints between phases, keeping the human researcher as the sole decision-making author, and integrating integrity audits plus multi-round review into the main pipeline. Because that repository uses a CC BY-NC license, zero text was copied.
+- [nature-skills](https://github.com/Yuan1z0825/nature-skills): router-first entry architecture with on-demand reference loading, and separating drafting, polishing, and reviewer-response responsibilities.
 
 ## License
 

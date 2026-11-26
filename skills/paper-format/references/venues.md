@@ -1,44 +1,82 @@
 # 主流期刊与会议格式档案
 
-说明：各期刊与会议每年可能微调页数限制、声明模块和匿名政策。下表给出常规基准参数，正式落版与提交前务必对照目标去向当届官方 Author Guidelines 或 Call for Papers 复核；表中标为“以当届官网为准”的细项须在项目格式卡中补齐实测值。
+说明：各期刊与会议每年都会调整页数上限、附带声明模块和匿名政策。本档案仅给出主赛道或常见情形的核验起点与易错项，不构成固定不变的官方条款。正式落版与提交前，必须对照目标去向当届官方 Author Guidelines 或 Call for Papers 核验全部条款，并将指南版本、核对日期与实测口径记入项目格式卡。
 
 ## 一、快速对照总表
 
-| 目标去向 | 官方模板 | 栏数 | 正文篇幅惯例 | 摘要限制 | 匿名要求 | 参考文献风格 | 特有必需项 |
+| 目标去向 | 官方模板 | 栏数 | 正文篇幅核验起点 | 摘要限制 | 匿名要求 | 参考文献风格 | 特有必需项与核验要点 |
 |---|---|---|---|---|---|---|---|
-| Elsevier（Information Fusion / KBS） | `elsarticle.cls` | 审稿常用单栏 `review` / 终版或自审常用 `5p,twocolumn` | 常见双栏 12–16 页（无硬性一刀切，过长易被拒） | 通常 150–250 词 | 多为单盲（以具体刊物最新政策为准） | `elsarticle-num` 或 `elsarticle-harv` | Highlights、CRediT 声明、利益冲突声明、数据可用性声明 |
-| IEEE TPAMI / TNNLS | `IEEEtran.cls` (`journal`) | 双栏 | TPAMI 常规稿一般 14 页内；TNNLS 常规约 10–14 页（超页规则见官网） | 通常 150–250 词，不含公式和引用 | 一般为单盲（以当年政策为准） | `IEEEtran.bst`（数字顺序） | Index Terms；录用终稿需作者简介与照片 |
-| NeurIPS | `neurips_202X.sty` | 单栏 | 9 页正文（不含参考文献、Checklist 与附录） | 简明一段，通常 150–250 词 | 严格双盲 | `natbib`（作者-年份或编号，依模板默认） | NeurIPS Paper Checklist（必附）、局限性讨论 |
-| ICML | `icml202X.sty` | 双栏 | 8 页正文（不含影响声明、参考文献与附录） | 建议 4–6 句，简明单段 | 严格双盲 | `icml202X.bst`（作者-年份） | Broader Impact Statement（放参考文献前，不占正文页数） |
-| ICLR | `iclr202X_conference.sty` | 单栏 | 常规 9–10 页正文（以当届 CFP 为准，不含参考文献与附录） | 一段式，无硬性极短上限但建议 250 词内 | 严格双盲（OpenReview） | `iclr202X_conference.bst`（作者-年份） | Ethics / Reproducibility 声明（推荐/按需）、LLM 使用披露（以当届政策为准） |
-| ACL ARR（ACL / EMNLP / NAACL） | `acl_latex`（`acl.sty`） | 双栏 | 长文 8 页、短文 4 页（不含 Limitations、Ethics、参考文献与附录） | 建议 150–250 词 | 严格双盲 | `acl_natbib.bst`（作者-年份） | 强制 Limitations 专节（通常放正文后、参考文献前）、Responsible NLP Checklist |
+| Elsevier（Information Fusion / KBS） | `elsarticle.cls` | 审稿常见单栏 `review` / 预排或终版常用 `5p,twocolumn` | 无统一硬性页限，以目标刊物最新 Author Guidelines 为准（双栏 12–16 页仅作内部排版估算） | 通常 150–250 词，以刊物指南为准 | 按具体刊物最新政策分刊核验（常见单盲，须记入分刊登记表） | `elsarticle-num` 或 `elsarticle-harv` | 按刊物分别核验 Highlights、CRediT、利益冲突声明与数据可用性声明的适用性及上传位置 |
+| IEEE TPAMI / TNNLS | `IEEEtran.cls`（`journal`） | 双栏 | 以当届官网页限与超页收费规则为准（常见核验起点：TPAMI 14 页，TNNLS 10–14 页） | 通常 150–250 词，不含公式与引用 | 以当届刊物政策为准（常见单盲） | `IEEEtran.bst`（数字顺序） | Index Terms；录用终稿按要求补齐作者简介与照片 |
+| NeurIPS | `neurips_202X.sty` | 单栏 | 主赛道核验起点 9 页正文，以当届 CFP 为准（各阶段及附节计页规则记入格式卡） | 简明一段，建议 150–250 词 | 双盲评审，细则以当届 CFP 为准 | `natbib`（作者-年份或编号，依当届模板默认） | NeurIPS Paper Checklist（必附）、局限性讨论 |
+| ICML | `icml202X.sty` | 双栏 | 主赛道核验起点 8 页正文，以当届 CFP 为准（各阶段及附节计页规则记入格式卡） | 建议 4–6 句，简明单段 | 双盲评审，细则以当届 CFP 为准 | `icml202X.bst`（作者-年份） | 模板规定标题的影响声明（按当届模板标题命名，例如 `Impact Statement`），计页规则以当届 CFP 为准 |
+| ICLR | `iclr202X_conference.sty` | 单栏 | 以当届 CFP 为准（不设预设区间，逐届核验初投、返修与终稿页限） | 一段式，建议控制在 250 词内 | 双盲评审（OpenReview），细则以当届 CFP 为准 | `iclr202X_conference.bst`（作者-年份） | Ethics / Reproducibility 声明（按当届要求）、LLM 使用披露（以当届政策为准） |
+| ACL ARR（ACL / EMNLP / NAACL） | 官方发布包 `acl_latex`（内含样式文件 `acl.sty`） | 双栏 | 主赛道核验起点长文 8 页、短文 4 页，以当届 CFP 为准 | 建议 150–250 词 | 双盲评审，细则以当届 ARR 政策为准 | `acl_natbib.bst`（作者-年份） | 稿件内必填 `Limitations` 专节（及按需 `Ethics Statement`）；投稿系统内另填 Responsible NLP Checklist 等问卷 |
 
 ## 二、分刊细则与高频踩坑点
 
 ### 1. Elsevier `elsarticle`（Information Fusion、Knowledge-Based Systems）
-- 模板选项：初投审稿常见 `\documentclass[preprint,12pt]{elsarticle}` 或 `review` 单栏便于审稿人阅读；若为了直观掌控印刷篇幅与双栏图宽，可用 `5p,twocolumn` 预排检查，再按期刊投稿系统要求决定上传单栏还是双栏 PDF。
-- Highlights 硬规则：独立列出 3 至 5 条纯英文要点，每条严格不超过 85 个英文字符（含空格），不能写成中文，不能塞入未解释缩写或公式，也不重复摘要原句。
-- 声明模块：文末规范填写 CRediT authorship contribution statement、Declaration of competing interest、Data availability（不可留“占位”或红字）。
-- 图形摘要（Graphical Abstract）：多为推荐或可选，若提交则独立构图，聚焦核心机制而非直接截正文某张数据表。
-- 主题契合提醒：投 Information Fusion 时，若正文主打多源信息融合，必须给出清晰的融合机理、冲突消解分析以及信息融合领域的代表文献，不可仅做口号式贴标。
+
+- 模板选项：初投审稿常见 `\documentclass[preprint,12pt]{elsarticle}` 或 `review` 单栏便于审稿人阅读。为了在内部评估印刷篇幅与双栏图宽，可用 `5p,twocolumn` 预排估算（内部排版估算通常参考双栏 12–16 页，但不把该区间当作刊物硬性页限），最终上传单栏还是双栏 PDF 按投稿系统要求决定。
+- Highlights 核验口径：是否必须提交以具体刊物最新 Author Guidelines 为准。凡要求提交 Highlights 时，按独立可编辑文件（如单独的 `.docx` 或 `.txt` 文件，依系统要求）准备并检查，保持 3 至 5 条纯英文要点，每条最多 85 个字符（含空格），不能写成中文，不塞入未解释缩写或公式，也不照搬摘要原句。
+- 声明模块与匿名政策分刊判定：不同 Elsevier 刊物对 Highlights、CRediT 贡献声明、利益冲突声明、数据可用性声明以及单盲/双盲的适用性与上传位置存在差异，不可一刀切处理。落版前须按下表在项目格式卡中分别完成核验与登记（未核验项保留 `待补`）：
+
+| 核验项 | Information Fusion（核验登记） | Knowledge-Based Systems（核验登记） |
+|---|---|---|
+| 指南版本与核对日期 | 待补（以官网 Author Guidelines 为准） | 待补（以官网 Author Guidelines 为准） |
+| 盲审与匿名要求 | 待补（核验单盲/双盲及稿件去身份范围） | 待补（核验单盲/双盲及稿件去身份范围） |
+| Highlights 适用性与上传位置 | 待补（要求提交时为独立可编辑文件，3–5 条纯英文，每条 ≤85 字符含空格） | 待补（要求提交时为独立可编辑文件，3–5 条纯英文，每条 ≤85 字符含空格） |
+| CRediT authorship contribution statement | 待补（核验必填性及位置：稿件文末 / 独立文件 / 系统表单） | 待补（核验必填性及位置：稿件文末 / 独立文件 / 系统表单） |
+| Declaration of competing interest | 待补（核验必填性及位置：稿件文末 / 独立声明文件 / 系统表单） | 待补（核验必填性及位置：稿件文末 / 独立声明文件 / 系统表单） |
+| Data availability | 待补（核验必填性及位置：稿件文末 / 系统表单） | 待补（核验必填性及位置：稿件文末 / 系统表单） |
+
+- 图形摘要（Graphical Abstract）：多为推荐或可选，按具体刊物要求决定。若提交则独立构图，聚焦核心机制而不是直接截取正文数据表。
+- 主题契合提醒：投 Information Fusion 时，若正文主打多源信息融合，必须给出清晰的融合机理、冲突消解分析以及信息融合领域的代表文献，不可只做口号式贴标。
 
 ### 2. IEEE 期刊（TPAMI、TNNLS）
+
 - 模板结构：使用 `\documentclass[journal]{IEEEtran}`，首页自带双栏排版、摘要与 `IEEEkeywords`（Index Terms）。
-- 摘要禁区：IEEE 摘要必须独立成篇，严禁在摘要里出现文献引用编号、图表引用和复杂数学公式。
-- 图表与页数：TPAMI 对超页收费与总页数有明确上限（以当年官网最新规定为准）；长公式跨栏需谨慎使用 `figure*` 置顶或拆行，避免打断双栏阅读流。
+- 摘要禁区：IEEE 摘要必须独立成篇，严禁在摘要中出现文献引用编号、图表引用和复杂数学公式。
+- 图表与页数：TPAMI 与 TNNLS 的常规页限、超页收费标准及总页数上限均以当届官网最新规定为准（TPAMI 14 页、TNNLS 10–14 页仅作核验起点）。长公式跨栏需谨慎处理，尽量拆行或在合适位置用 `figure*` 置顶，避免打断双栏阅读流。
 - 文献格式：严格使用 `IEEEtran.bst` 样式，按正文出现顺序编号，作者名缩写与期刊名标准缩写保持一致。
 
 ### 3. ML 三大顶会（NeurIPS / ICML / ICLR）
-- 页数红线：超出一行都可能触发 desk reject。绝不允许通过修改页边距、压缩行距、改小正文字号或缩小图注字体来硬塞页数，官方脚本会自动检测样式篡改。
-- 匿名要求：禁用 `\author` 真名，使用模板匿名开关；文中引用自己先前工作必须用第三人称（“Wang et al. 提出……”而非“在我们先前的工作中……”）；开源代码用匿名仓库（如 Anonymous GitHub）或提交补充材料压缩包，剥离所有带个人/机构标识的 URL。
-- 必备章节与清单：NeurIPS 必须完整、诚实填写 Paper Checklist 并附在参考文献之后（乱填“Yes”而正文无对应内容会被直接质疑诚信）；ICML 必须包含 Impact Statement；ICLR 需注意 OpenReview 公开评审期与当届 LLM 使用披露规范。
+
+- 页数红线与分阶段核验：NeurIPS 主赛道以 9 页正文为核验起点，ICML 主赛道以 8 页正文为核验起点，ICLR 不预设混合页数区间，三者均以当届 CFP 为准。项目格式卡须逐届登记初投、返修/答辩与终稿（Camera-ready）各自的页限，并分别核对参考文献、附录、Paper Checklist、影响声明、Limitations 与 Ethics 是否计入正文页限。超出一行都可能触发 desk reject，严禁通过修改页边距、压缩行距、改小正文字号或缩小图注字体来硬塞页数。
+- 匿名与外发规则（均以当届指南版本为准并登记核对日期）：
+  - 预印本政策：核查当届是否允许在投稿前或审稿期公开预印本（如 arXiv）、是否存在禁止公开或宣传的匿名窗口期。
+  - 匿名链接规则：核查是否允许在正文中放外部链接；允许时仅使用不含作者或机构信息的匿名仓库或匿名链接，严禁使用指向个人账号或课题组主页的 URL。
+  - 补充材料规则：核查补充材料是随主 PDF 附在附录之后，还是以独立压缩包上传，并清除压缩包内的本地路径、用户名、`.git` 历史与 PDF 元数据。
+  - 自引规则：文中引用作者团队先前工作须采用客观第三人称表述（如“Wang et al. 提出……”而非“在我们先前的工作中……”），不借表述暗示归属关系。
+- 必备章节与模板标题统一：NeurIPS 须完整、诚实填写 Paper Checklist 并按当届模板规定位置附于稿中（不可在正文无对应内容时填“Yes”）。ICML 的影响声明必须统一采用当届所用官方模板规定的标题（例如 `Impact Statement`），避免在同一份文档或检查表里混用 `Broader Impact Statement` 与 `Impact Statement`。ICLR 须额外核查 OpenReview 公开评审机制与当届 LLM 使用披露政策。
 
 ### 4. ACL ARR（ACL / EMNLP / NAACL）
-- 强制 Limitations：长短文均须设置 `Limitations` 专节（紧接结论之后、参考文献之前，通常不计入 8/4 页正文上限），诚实交代适用范围、数据偏置、算力开销与失败边界，未写 Limitations 可能直接拒稿。
-- 伦理与复现：涉及人工标注、用户隐私或敏感安全评测时，增设 `Ethics Statement` 并完整填写 ARR 的 Responsible NLP Checklist。
-- 匿名期与预印本：核查当届 ARR 是否仍保留匿名期规定或已调整预印本政策（具体口径以当届官网公告为准）。
 
-## 三、Word 内部讨论稿的最低底线
+- 模板发布包与样式文件区分：官方发布的完整模板包为 `acl_latex`（包含主文件示例、参考文献样式 `acl_natbib.bst` 与宏包说明），`acl.sty` 只是其中的样式文件。初始化工程时必须下载当届完整的官方 `acl_latex` 发布包，核对匿名评审开关（如 `review` 选项），不要把旧版工程里的单个 `acl.sty` 直接拼凑复用。
+- 页限核验起点：主赛道以长文 8 页正文、短文 4 页正文作为核验起点，实际初投、返修与终稿页限及各附加节的计页规则以当届 ARR 与目标会议 CFP 为准。
+- 稿件必填节与投稿系统问卷分列：
+  - 稿件正文内强制设置 `Limitations` 专节（通常位于结论之后、参考文献之前，核验当届是否不计入正文页限），诚实交代适用范围、数据偏置、算力开销与失败边界；涉及人工标注、用户隐私或敏感安全评测时，按要求在稿件内增设 `Ethics Statement`。
+  - 投稿系统内须单独完成 Responsible NLP Checklist 及其他平台问卷，与稿件内的 `Limitations` 专节分别核对，不得漏填或互相替代。
+- 匿名期、预印本、匿名链接、补充材料与自引：逐届核查当届 ARR 是否取消或保留匿名期规定、预印本与匿名代码链接口径、补充材料提交格式及第三人称自引规则，将指南版本与核对日期记入项目格式卡。
+
+## 三、项目格式卡登记模板（逐届追溯）
+
+每次立项定刊或切换目标去向时，在项目目录中生成并填写下表，将易变口径固定到具体指南版本与核对日期，避免凭记忆沿用往届规则：
+
+| 登记字段 | 实测口径（按当届官方指南填写） |
+|---|---|
+| 目标期刊/会议与赛道 | 待补 |
+| 官方指南版本 / CFP 链接 | 待补 |
+| 核对日期 | 待补（YYYY-MM-DD） |
+| 模板发布包与版本（含样式文件） | 待补 |
+| 页限（初投 / 返修或答辩 / 终稿） | 初投 `待补`；返修或答辩 `待补`；终稿 `待补` |
+| 计页规则（参考文献 / 附录 / Checklist / Impact / Limitations / Ethics） | 参考文献 `待补`；附录 `待补`；Checklist `待补`；Impact `待补`；Limitations `待补`；Ethics `待补` |
+| 摘要字数与格式限制 | 待补 |
+| 匿名政策（盲审类型 / 预印本与匿名期 / 匿名链接 / 补充材料 / 自引规则） | 待补 |
+| 附加组件与声明（适用性、字数口径及上传位置） | 待补 |
+| AI / LLM 使用披露要求 | 待补 |
+
+## 四、Word 内部讨论稿的最低底线
 
 当导师或合作者习惯在 Word 中用批注审阅中文讨论稿时，可额外导出一份内部 `.docx`，但须满足三条底线：
 1. 绝不直接拿 `pandoc` 默认样式裸导出的文件交付审稿或投稿。
